@@ -8,7 +8,12 @@
     "build": "vite build && esbuild server.ts --bundle --platform=node --format=cjs --packages=external --sourcemap --outfile=dist/server.cjs",
     "start": "node dist/server.cjs",
     "clean": "rm -rf dist server.js data.json",
-    "lint": "tsc --noEmit"
+    "lint": "tsc --noEmit",
+    "build:web": "vite build",
+    "cap:add": "cap add android",
+    "cap:sync": "cap sync",
+    "cap:build": "cap build android",
+    "cap:open": "cap open android"
   },
   "dependencies": {
     "@google/genai": "^2.4.0",
@@ -20,7 +25,10 @@
     "vite": "^6.2.3",
     "express": "^4.21.2",
     "dotenv": "^17.2.3",
-    "motion": "^12.23.24"
+    "motion": "^12.23.24",
+    "@capacitor/core": "^6.1.0",
+    "@capacitor/cli": "^6.1.0",
+    "@capacitor/android": "^6.1.0"
   },
   "devDependencies": {
     "@types/node": "^22.14.0",
