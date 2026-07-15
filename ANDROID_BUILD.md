@@ -95,8 +95,8 @@ adb install -r android/app/build/outputs/apk/release/app-release.apk
 
 ```bash
 # Gerar chave de assinatura (primeira vez)
-keytool -genkey -v -keystore my-release-key.jks \
-  -keyalg RSA -keysize 2048 -validity 10000 \
+keytool -genkey -v -keystore my-release-key.jks \\
+  -keyalg RSA -keysize 2048 -validity 10000 \\
   -alias my-key-alias
 
 # Configurar em android/app/build.gradle:
@@ -138,7 +138,7 @@ cd android && ./gradlew assembleRelease
 ### Backend não conecta
 - Verifique `VITE_API_URL` em `.env.local`
 - Teste em modo debug primeiro
-- Verif ique se o device consegue acessar a URL (tente no navegador)
+- Verifique se o device consegue acessar a URL (tente no navegador)
 
 ## Próximas Etapas
 

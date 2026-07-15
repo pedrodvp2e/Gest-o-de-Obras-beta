@@ -29,8 +29,8 @@ gcloud services enable artifactregistry.googleapis.com
 
 ```bash
 # Criar repositório Docker
-gcloud artifacts repositories create gestao-obras-api \
-  --repository-format=docker \
+gcloud artifacts repositories create gestao-obras-api \\
+  --repository-format=docker \\
   --location=us-central1
 
 # Configurar Docker para autenticar
@@ -51,13 +51,13 @@ docker push us-central1-docker.pkg.dev/gestao-obras-api/gestao-obras-api/gestao-
 
 ```bash
 # Deploy do serviço
-gcloud run deploy gestao-obras-api \
-  --image=us-central1-docker.pkg.dev/gestao-obras-api/gestao-obras-api/gestao-obras-api:latest \
-  --region=us-central1 \
-  --platform=managed \
-  --allow-unauthenticated \
-  --set-env-vars="GEMINI_API_KEY=sua-chave-aqui" \
-  --memory=512Mi \
+gcloud run deploy gestao-obras-api \\
+  --image=us-central1-docker.pkg.dev/gestao-obras-api/gestao-obras-api/gestao-obras-api:latest \\
+  --region=us-central1 \\
+  --platform=managed \\
+  --allow-unauthenticated \\
+  --set-env-vars="GEMINI_API_KEY=sua-chave-aqui" \\
+  --memory=512Mi \\
   --timeout=3600
 ```
 
