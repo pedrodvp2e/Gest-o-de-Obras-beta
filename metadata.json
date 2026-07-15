@@ -1,0 +1,8 @@
+{
+  "name": "Gestão de Obras e Materiais",
+  "description": "Aplicativo para controle de materiais, cronograma de etapas com cronômetro, comunicação de equipe e armazenamento de projetos de construção com diferentes permissões.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
